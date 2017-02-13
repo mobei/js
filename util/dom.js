@@ -63,9 +63,6 @@ var dom = {
             el.style[name] = val;
         }
     },
-    /**
-        style: "box-shadow: 1px 1px 8px #eee;box-sizing: border-box;"
-    */
     css3: function(style) {
         var result = "";
         util.each((style || "").split(";"), function(attr) {
@@ -107,7 +104,7 @@ var dom = {
     getEvent: function(ev) {
         return ev || root.event;
     },
-    /*on: function(el, type, fn) {
+    on: function(el, type, fn) {
         if (!el) return;
         el.addEventListener ? el.addEventListener(type, fn, false) : el.attachEvent("on" + type, fn);
     },
@@ -115,7 +112,7 @@ var dom = {
         if (!el) return;
 
         el.removeEventListener ? el.removeEventListener(type, fn, false) : el.detachEvent("on" + type, fn);
-    },*/
+    },
     stopPropagation: function(ev) {
         ev = this.getEvent(ev);
 
